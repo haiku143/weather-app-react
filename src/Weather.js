@@ -19,9 +19,10 @@ export default function Weather() {
           <div className="col-9">
             <input
               type="search"
-              placeholder="Type a city.."
+              placeholder="Enter a city.."
               className="form-control"
               autoComplete="off"
+              autofocus="on"
             />
           </div>
           <div className="col-3">
@@ -40,7 +41,7 @@ export default function Weather() {
           <li>{weatherData.description}</li>
         </ul>
       </div>
-      <div className="row">
+      <div className="row mt-3">
         <div className="col-6">
           <div className="clearfix weather-temperature">
             <img

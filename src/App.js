@@ -9,7 +9,7 @@ function App() {
       <div className="container">
         <Weather />
         <footer>
-          Coded by Shantel Scott
+          Coded by Shantel Scott and is
           <a
             href="https://github.com/haiku143/weather-app-react"
             target="_blank"
