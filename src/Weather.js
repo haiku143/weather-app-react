@@ -1,28 +1,24 @@
 import React from "react";
+import axios from "axios";
 import "./Weather.css";
 
 export default function Weather() {
-  let weatherData = {
-    city: "Las Vegas",
-    temperature: 20,
-    date: "Tuesday 10:00",
-    description: "Sunny",
-    imgUrl: "http://openweathermap.org/img/wn/01d@2x.png",
-    humidity: 80,
-    Wind: 7
-  };
+  function handleResponse(response) {
+    console.log(response.data);
+  }
 
+  const apiKey = "4d792cfd34dd05c4d245cf45fd0ef7bf";
+  let city = "New York";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   return (
     <div className="Weather">
-      <form className="mb-3">
+      <form>
         <div className="row">
           <div className="col-9">
             <input
               type="search"
               placeholder="Enter a city.."
               className="form-control"
-              autoComplete="off"
-              autofocus="on"
             />
           </div>
           <div className="col-3">
@@ -34,33 +30,21 @@ export default function Weather() {
           </div>
         </div>
       </form>
-      <div className="overview">
-        <h1>{weatherData.city}</h1>
-        <ul>
-          <li>Last updated: {weatherData.date}</li>
-          <li>{weatherData.description}</li>
-        </ul>
-      </div>
-      <div className="row mt-3">
+      <h1>New York</h1>
+      <ul>
+        <li>Wednesday 10:00</li>
+        <li>Mostly Cloudy</li>
+      </ul>
+      <div classname="row">
         <div className="col-6">
-          <div className="clearfix weather-temperature">
-            <img
-              src={weatherData.imgUrl}
-              alt={weatherData.description}
-              className="float-left"
-            />
-            <div className="float-left">
-              <strong>{weatherData.temperature}</strong>
-              <span className="units">
-                <a href="/">°C</a> | <a href="/">°F</a>
-              </span>
-            </div>
-          </div>
+          <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="Sunny" />
+          6°C
         </div>
         <div className="col-6">
           <ul>
-            <li>{weatherData.humidity}%</li>
-            <li>{weatherData.wind} km/h</li>
+            <li>Preciptitation: 15%</li>
+            <li>Humidity: 72%</li>
+            <li>Wind: 13 km/h</li>
           </ul>
         </div>
       </div>

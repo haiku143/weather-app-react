@@ -13,6 +13,7 @@ function App() {
           <a
             href="https://github.com/haiku143/weather-app-react"
             target="_blank"
+            className="_blank"
           >
             open-sourced on github
           </a>

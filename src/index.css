@@ -4,33 +4,6 @@
   margin: 30 px auto;
 }
 
-body {
-  font-family: "Galada", cursive;
-}
 
-h1 {
-  color: teal;
-  font-size: 24px;
-  font-weight: 100;
-  line-height: 28px;
-  margin-bottom: 0;
-}
 
-ul {
-  margin: 0;
-  padding: 0;
-}
 
-li {
-  list-style: none;
-  color: rgb(92, 179, 174);
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  font-weight: 100;
-  line-height: 19px;
-}
-
-li:first-letter {
-  text-transform: capitalize;
-}
