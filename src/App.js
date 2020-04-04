@@ -7,15 +7,15 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <Weather />
+        <Weather defaultCity="Pozzuoli" />
         <footer>
-          Coded by Shantel Scott and is
+          Coded by Shantel Scott, open-sourced on
           <a
             href="https://github.com/haiku143/weather-app-react"
             target="_blank"
             className="_blank"
           >
-            open-sourced on github
+            GitHub
           </a>
         </footer>
       </div>
