@@ -16,7 +16,7 @@ export default function WeatherInfo(props) {
         <div className="col-6">
           <div className="clearfix">
             <div className="float-left">
-              <img src="http://openweathermap.org/img/wn${forecast.weather[0].icon}@2x.png" />
+              <img src={props.data.imgUrl} alt={props.data.description} />
             </div>
             <div className="float-left">
               <WeatherTemperature celsius={props.data.temperature} />
